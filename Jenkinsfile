@@ -4,7 +4,7 @@ pipeline {
     agent any
     environment {
         awsEcrCreds = 'ecr:us-east-2:**********'
-        awsEcrRegistry = "*******.dkr.ecr.us-east-2.amazonaws.com/*******"
+        awsEcrRegistry = "public.ecr.aws/x1l1w6i5/jenkins-pipeline"
         imageRegUrl = "https://**********.dkr.ecr.us-east-2.amazonaws.com"
         awsRegion = "us-east-2"
     }
