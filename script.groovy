@@ -15,9 +15,10 @@ def buildImage() {
 
 def pushImage() {
     echo "Push Docker Image to ECR"
-    docker.withRegistry (imageRegUrl, awsEcrCreds) {
-        dockerImage.push ("$BUILD_NUMBER")
-        dockerImage.push ('latest')
+    def dockerImage = docker.build(imageRegUrl + ":$BUILD_NUMBER", "./Docker-files/app/multistage/")
+    docker.withRegistry(imageRegUrl, 'ecr:us-east-2:AWS_Credentials') {
+        dockerImage.push("$BUILD_NUMBER")
+        dockerImage.push('latest')
     }
 }
 
