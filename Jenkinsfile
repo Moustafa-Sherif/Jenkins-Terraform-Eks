@@ -53,14 +53,14 @@ pipeline {
                 }
             }
         }
-        stage ('provision eks cluster') {
+        stage ('provision-eks-cluster') {
             steps {
                 script {
                     gv.provisionEksCluster()
                 }
             }
         }
-        stage ('connect to eks cluster') {
+        stage ('connect-to-eks-cluster') {
             steps {
                 script {
                     gv.connectEks()
