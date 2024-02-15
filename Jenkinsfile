@@ -3,7 +3,7 @@ def gv
 pipeline {
     agent any
     environment {
-        awsEcrCreds = 'AWS_Credentials'
+        awsEcrCreds = '447360774718'
         awsEcrRegistry = "public.ecr.aws/x1l1w6i5/jenkins-pipeline"
         imageRegUrl = "public.ecr.aws/x1l1w6i5/jenkins-pipeline"
         awsRegion = "us-east-2"
