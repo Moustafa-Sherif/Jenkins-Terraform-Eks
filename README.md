@@ -256,4 +256,4 @@ Pushes the Docker image to Amazon Elastic Container Registry (ECR) using the pus
 Invokes the provisionEksCluster method, which goes beyond just creating an Amazon Elastic Kubernetes Service (EKS) cluster. It also sets up a Virtual Private Cloud (VPC) with essential components like subnets, an internet gateway, NAT gateway, route table, and more. This entire infrastructure is provisioned using a Terraform module. For a deeper understanding of the context, you can refer to the script.groovy and the terraform folder. 😊
 
 ## Connect to EKS Cluster Stage:
-Calls the connectEks method, indicating the establishment of a connection to the provisioned EKS cluster. And deploying this pushed image in our EKS cluster
+Calls the connectEks method, indicating the establishment of a connection to the provisioned EKS cluster. And deploying this pushed image in our EKS cluster.
