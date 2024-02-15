@@ -14,6 +14,8 @@ def buildImage() {
 }
 
 def pushImage() {
+    echo "Logging in to AWS ECR"
+    sh 'aws ecr get-login-password --region us-east-2 | docker login --username AWS --password-stdin 447360774718.dkr.ecr.us-east-2.amazonaws.com'
     echo "Push Docker Image to ECR"
     def dockerImage = docker.build("jenkins-pipeline:$BUILD_NUMBER", "./Docker-files/app/multistage/")
     docker.withRegistry(imageRegUrl, 'ecr:us-east-2:AWS_Credentials') {
