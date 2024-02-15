@@ -1,7 +1,7 @@
 FROM openjdk:11 AS BUILD_IMAGE
 RUN apt update && apt install maven -y
-RUN git clone https://github.com/profebass99/jenkins-terraform-eks.git
-RUN cd jenkins-terraform-eks && mvn clean install
+RUN git clone https://github.com/Moustafa-Sherif/Jenkins-Terraform-Eks.git
+RUN cd Jenkins-Terraform-Eks && mvn clean install
 
 FROM tomcat:9-jre11
 

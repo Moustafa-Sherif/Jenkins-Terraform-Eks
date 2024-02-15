@@ -1,6 +1,6 @@
 def fetchCode() {
     echo "Pull Source code from GitHub"
-    git branch: 'main', url: 'https://github.com/profebass99/jenkins-terraform-eks.git'
+    git branch: 'main', url: 'https://github.com/Moustafa-Sherif/Jenkins-Terraform-Eks.git'
 }
 
 def buildCode() {
