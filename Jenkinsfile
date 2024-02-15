@@ -3,7 +3,7 @@ def gv
 pipeline {
     agent any
     environment {
-        awsEcrCreds = 'aws ecr get-login-password --region us-east-2 | docker login --username AWS --password-stdin 447360774718.dkr.ecr.us-east-2.amazonaws.com'
+        awsEcrCreds = 'AWS_Credentials'
         awsEcrRegistry = "public.ecr.aws/x1l1w6i5/jenkins-pipeline"
         imageRegUrl = "public.ecr.aws/x1l1w6i5/jenkins-pipeline"
         awsRegion = "us-east-2"
