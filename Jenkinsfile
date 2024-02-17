@@ -3,9 +3,9 @@ def gv
 pipeline {
     agent any
     environment {
-        awsEcrCreds = '447360774718'
-        awsEcrRegistry = "public.ecr.aws/x1l1w6i5/jenkins-pipeline"
-        imageRegUrl = "https://public.ecr.aws/x1l1w6i5/jenkins-pipeline"
+        awsEcrCreds = 'ecr:us-east-2:447360774718'
+        awsEcrRegistry = "447360774718.dkr.ecr.us-east-2.amazonaws.com/jenkins-pipeline"
+        imageRegUrl = "https://447360774718.dkr.ecr.us-east-2.amazonaws.com/jenkins-pipeline"
         awsRegion = "us-east-2"
     }
     tools {
@@ -52,7 +52,7 @@ pipeline {
                     gv.pushImage()
                 }
             }
-        }
+        }/*
         stage ('provision-eks-cluster') {
             steps {
                 script {
@@ -66,6 +66,6 @@ pipeline {
                     gv.connectEks()
                 }
             }
-        }
+        }*/
     }
 }
